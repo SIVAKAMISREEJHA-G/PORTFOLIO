@@ -1,0 +1,252 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); */
+
+*{
+    padding: 0%;
+    box-sizing: border-box;
+    margin: 0%;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: #000000;
+    color: #fff;;
+}
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1; 
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
+}
+.header-content{
+    justify-content: space-between;
+    padding: 25px 10%;
+    display: flex;
+}
+.logo{
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: 610;
+    color: white;
+    animation: slideLeft 1s ease forwards;
+    opacity: 0;
+    text-decoration: none;
+}
+.navbar a{
+    color:#fff;
+    display: inline-block;
+    transition: 0.3s all;
+    text-decoration: none;
+    padding: 0px 15px;
+    animation: navMenu 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+    font-weight: 600;
+}
+.navbar a:hover,
+.navbar a:active{
+    color: aqua;
+}
+.hero-contain{
+    justify-content: center;
+    padding: 26px 10%;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+}
+.info-side h3{
+     font-size: 30px;
+     font-weight: 690;
+     letter-spacing: 1px;
+     margin: 12px;
+     animation-delay: 0.3;
+}
+.info-side h1{
+    letter-spacing: 1px;
+    font-size: 76px;
+    animation: slideRight 0.2s ease forwards;
+    font-weight: 700;
+}
+.info-side h3 span{
+    color: aqua;
+}
+.part-1{
+    animation: part-1 0.3s ease forwards;
+    opacity: 0;
+    animation-delay: 0.4s;
+}
+.part-2{
+    animation: part-2 0.3s ease forwards;
+    opacity: 0;
+    animation-delay: 0.4s;
+}
+img {
+    animation: zoom 0.4s ease forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+    float: right;
+    z-index: 2;
+    width: 430px;
+    height: 400px;
+}
+p{
+    margin: 21px 0px 40px 0px;
+    line-height: 28px;
+    opacity: 0;
+    animation-delay: 0.3s;
+    animation: slideLeftP 0.3s ease forwards;
+    color: #fff;
+}
+i{
+    padding: 12px;
+    position: relative;
+    border: 3px solid #0ef;
+    border-radius: 50%;
+    color: #0ef;
+    margin: 0px 8px;
+    animation: socialIcons 0.2s ease forwards;
+    transition: 0.2s;
+    animation-delay: calc(0.2s * var(--i));
+}
+i:hover{
+    box-shadow: 0 0 20px #0ef;
+}
+.bn{
+    background-color: #0ef;
+    cursor: pointer;
+    margin-top: 50px;
+    padding: 20px 70px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 0 15x #0ef;
+    transition: 0.3s;
+    animation: slideUp 0.3s ease forwards;
+    animation-delay: 0.3s;
+    font-weight: 600;
+    opacity: 0;
+}
+.bn :hover{
+    box-shadow: none;
+}
+section {
+    display: none;
+    font-size: medium;
+    color: #0ef;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    text-align:right;
+    width: 100%;
+    background-color: transparent; 
+}
+  
+.footer-content {
+    padding: 20px;
+    color: #fff; 
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transition: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes navMenu {
+    0% {
+        opacity: 0;
+        transition: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes part-1{
+        0% {
+            opacity: 0;
+            transition: translateY(100px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+}
+@keyframes part-2 {
+            0% {
+                opacity: 0;
+                transition: translateY(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+}
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transition: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideLeftP{
+    0% {
+            opacity: 0;
+            transition: translateX(100px);
+        }
+    100% {
+            opacity: 1;
+            transform: translateX(0);
+        }      
+ }
+ @keyframes socialIcons{
+    0% {
+            opacity: 0;
+            transition: translateX(100px);
+        }
+    100% {
+            opacity: 1;
+            transform: translateX(0);
+        }      
+ }
+ @keyframes slideUp {
+    0% {
+            opacity: 0;
+            transition: translateY(100px);
+        }
+    100% {
+            opacity: 1;
+            transform: translateY(0);
+        }      
+ }
+ @keyframes zoom {
+    0% {
+            opacity: 0;
+            transform: scale(0);
+        }
+    100% {
+            opacity: 1;
+            transform: scale(1);
+        }      
+ }
